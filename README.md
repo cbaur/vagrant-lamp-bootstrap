@@ -6,11 +6,11 @@ A super-simple Vagrantfile / bootstrap.sh to setup a LAMP stack inside Vagrant 1
 
 This is a reduced-to-the-max Vagrant setup file for a quick development stack. It will:
 
-* setup a Ubuntu 14.04 LTS "Trustry Thar" 64bit box
+* setup a Ubuntu 16.04 LTS "Xenial Xerus" 64bit box
 
 * make the box accessable by the host at IP `192.168.33.22`
 
-* sync the current folder with `/var/www/html` inside the box
+* ~~sync the current folder with `/var/www/html` inside the box~~ Synchronisation can be set up via SFTP
 
 * automatically perform all the commands in bootstrap.sh directly after setting up the box for the first time
 
@@ -20,7 +20,7 @@ The bootstrap.sh will:
 
 * create a folder inside /var/www/html
 
-* install apache 2.4, php 5.5, MySQL, PHPMyAdmin, git and Composer
+* install apache 2.4, php 7, MySQL, PHPMyAdmin, git and Composer
 
 * also setting a pre-chosen password for MySQL and PHPMyAdmin
 
@@ -31,8 +31,8 @@ You can folder and password inside the bootstrap.sh for sure.
 ### How to use ?
 
 Put `Vagrantfile` and `bootstrap.sh` inside a folder and do a `vagrant up` on the command line.
-This box uses Ubuntu 14.04 LTS "Trustry Thar" 64bit, so if you don't have the basic box already, do a 
-`vagrant box add ubuntu/trusty64` before.
+This box uses Ubuntu 16.04 LTS "Xenial Xerus" 64bit, so if you don't have the basic box already, do a 
+`vagrant box add ubuntu/xenial64` before.
 
 ### Why ?
 
